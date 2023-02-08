@@ -1,5 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 /* ------------- */
 /* ------------- */
@@ -7,42 +6,41 @@
 /* ------------- */
 /* ------------- */
 
-
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default margin */
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -51,8 +49,8 @@ picture,
 svg,
 video,
 canvas {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /* make form elements inherit some styles*/
@@ -60,24 +58,24 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit;
-    font-size: 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ----------------- */
@@ -87,13 +85,12 @@ textarea {
 /* ----------------- */
 
 :root {
---pale-blue: hsl(225,100%,94%);
---bright-blue: hsl(245,75%,52%);
---very-pale-blue: hsl(225,100%,98%);
---desatured-blue: hsl(224,23%,55%);
---dark-blue: hsl(223,47%,23%);
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desatured-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
 }
-
 
 /* ------------- */
 /* ------------- */
@@ -101,9 +98,8 @@ textarea {
 /* ------------- */
 /* ------------- */
 
-
 body {
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
   display: flex;
   justify-content: center;
@@ -112,47 +108,111 @@ body {
 }
 
 .summary-container {
-    width: 355px;
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
+  width: 405px;
+  max-width: 405;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 15px 40px 1px #b8c0ff;
 }
 .summary-content {
-    padding: 2.1em 3em;
-    text-align: center;
+  padding: 2.3em 2.5em 1.9em 2.5em;
+  text-align: center;
 }
 h1 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5em;
 }
 .content-paragraph {
-    color: var(--desatured-blue);
-    font-size: 1rem;
-    font-weight: 500;
+  color: var(--desatured-blue);
+  font-size: 1rem;
+  padding: 0 1em;
 }
 
 .content-plan {
   background-color: var(--very-pale-blue);
   display: flex;
-  margin: 1.4em;
+  margin: 1.4em auto;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
 }
 
-button  {
-    display: block;
-    margin: 0 auto;
-    background-color: var(--bright-blue);
-    padding: 10px 0;
-    border-radius: 11px;
-    font-size: 1rem;
-    font-weight: 700;
+.music-icon {
+  width: 17%;
+  margin-right: 0.6em;
+}
+
+.plan-title {
+  font-weight: 900;
+}
+.value {
+  color: var(--desatured-blue);
+}
+
+.change-plan {
+  flex-basis: 40%;
+  text-align: right;
+  text-decoration: underline;
+  color: var(--bright-blue);
+  font-size: 0.8rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.change-plan:hover {
+  color: var(--desatured-blue);
+  text-decoration: none;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  padding: 10px 0;
+  border-radius: 11px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+}
+.button-proceed {
+  box-shadow: 0px 10px 27px 2px #b8c0ff;
+}
+.button-proceed:hover {
+  background-color: rgb(110, 132, 225);
+}
+
+.button-cancel {
+  margin-top: 1em;
+  background: none;
+  border-color: transparent;
+  color: var(--desatured-blue);
+}
+.button-cancel:hover {
+  color: black;
+}
+
+@media screen and (max-width: 350px) {
+  .content-plan {
+    flex-direction: column;
+    grid-row-gap: 1em;
+    width: 80%;
+  }
+  .content-paragraph {
+    font-size: 1.1rem;
+    padding: 0;
     width: 100%;
-    cursor: pointer;
-}
+  }
 
-button:nth-of-type(2) {
-    background: none;
-    border-color: transparent;
-    color: var(--very-dark-blue);
-    margin-top: 1em;
+  .music-icon {
+    width: 40px;
+  }
+  .change-plan {
+    font-size: 1rem;
+  }
 }
